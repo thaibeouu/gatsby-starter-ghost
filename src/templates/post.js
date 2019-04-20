@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import { Layout } from '../components/common'
 import { MetaData } from '../components/common/meta'
 
+
 /**
 * Single post view (/:slug)
 *
@@ -13,7 +14,6 @@ import { MetaData } from '../components/common/meta'
 */
 const Post = ({ data, location }) => {
     const post = data.ghostPost
-
     return (
             <>
                 <MetaData
