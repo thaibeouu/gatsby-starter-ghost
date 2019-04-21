@@ -21,21 +21,21 @@ const PostCard = ({ post }) => {
             <section className="post-card-excerpt">{post.excerpt}</section>
             <footer className="post-card-footer">
                 <div className="post-card-footer-left">
-                    <div className="post-card-avatar">
+                    <div className="author-name-tooltip">{post.primary_author.name}</div>
+                    <Link className="post-card-avatar" to={"/author/" + post.primary_author.slug}>
                         {post.primary_author.profile_image ?
                             <img className="author-profile-image" src={post.primary_author.profile_image} alt={post.primary_author.name}/> :
                             <img className="default-avatar" src="/images/icons/avatar.svg" alt={post.primary_author.name}/>
                         }
-                    </div>
-                    <span>{ post.primary_author.name }</span>
+                    </Link>
                 </div>
                 <div className="post-card-footer-right">
-                    <div>{readingTime}</div>
+                    <span className="reading-time">{readingTime}</span>
                 </div>
             </footer>
         </Link>
-    )
-}
+    );
+};
 
 PostCard.propTypes = {
     post: PropTypes.shape({
