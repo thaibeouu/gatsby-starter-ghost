@@ -1,0 +1,46 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "22:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@tryghost/helpers"
+    versions:
+    - 1.1.37
+    - 1.1.38
+    - 1.1.39
+    - 1.1.40
+    - 1.1.41
+  - dependency-name: eslint-plugin-react
+    versions:
+    - 7.22.0
+    - 7.23.0
+    - 7.23.1
+  - dependency-name: gatsby
+    versions:
+    - 2.31.1
+    - 2.32.0
+    - 2.32.10
+    - 2.32.11
+    - 2.32.2
+    - 2.32.3
+    - 2.32.4
+    - 2.32.6
+    - 2.32.8
+    - 2.32.9
+    - 3.0.2
+  - dependency-name: gatsby-plugin-advanced-sitemap
+    versions:
+    - 1.5.7
+  - dependency-name: lodash-es
+    versions:
+    - 4.17.20
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
